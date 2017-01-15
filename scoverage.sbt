@@ -1,4 +1,4 @@
-coverageMinimum := 90
-coverageFailOnMinimum := true
+coverageMinimum := 100
+coverageFailOnMinimum := false
 coverageHighlighting := true
-coverageExcludedPackages := "controllers.Reverse.*;controllers.javascript.Reverse.*;views.html.*;router.*"
+coverageExcludedPackages := "controllers.Reverse.*;controllers.javascript.Reverse.*"
