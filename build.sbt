@@ -24,7 +24,7 @@ includeFilter in (Assets, LessKeys.less) := "*.less"
 
 excludeFilter in (Assets, LessKeys.less) := "_*.less"
 
-parallelExecution in Test := true
+parallelExecution in Test := false
 
 fork in Test := false
 fork in run := false
