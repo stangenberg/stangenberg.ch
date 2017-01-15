@@ -1,0 +1,1 @@
+formatSbtFiles in Global := false

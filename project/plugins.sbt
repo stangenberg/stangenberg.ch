@@ -16,3 +16,17 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.1.1")
 addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.1.0")
 
 addSbtPlugin("org.irundaia.sbt" % "sbt-sassify" % "1.4.6")
+
+// build plugins
+
+addSbtPlugin("de.heikoseeberger" % "sbt-header" % "1.6.0")
+
+addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.4.1")
+
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.4.0")
+
+addSbtPlugin("org.scoverage" % "sbt-coveralls" % "1.1.0")
+
+addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "0.8.5")
+
+addSbtPlugin("com.typesafe.sbt" % "sbt-site" % "1.1.0")

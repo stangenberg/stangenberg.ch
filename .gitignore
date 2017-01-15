@@ -9,4 +9,5 @@ target
 /.sbtserver
 /project/.sbtserver
 /project/.sbtserver.lock
+Procfile
 
