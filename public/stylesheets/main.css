@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Stangenberg-Regular";
+    src: url("/assets/fonts/Stangenberg-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Stangenberg-Bold";
+    src: url("/assets/fonts/Stangenberg-Bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: Stangenberg-Bold;
+    font-size: 3em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+}
