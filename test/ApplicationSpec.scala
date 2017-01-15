@@ -40,7 +40,9 @@ class ApplicationSpec extends PlaySpec with OneAppPerTest {
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("stangenberg software")
+      contentAsString(home) must include ("<title>Stangenberg Software</title>")
+      contentAsString(home) must include ("<h1>Stangenberg Software</h1>")
+
     }
 
   }
