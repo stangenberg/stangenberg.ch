@@ -30,7 +30,7 @@ class IntegrationSpec extends PlaySpec with OneServerPerTest with OneBrowserPerT
 
       go to ("http://localhost:" + port)
 
-      pageSource must include ("stangenberg software")
+      pageSource must include ("Stangenberg Software")
     }
   }
 }
