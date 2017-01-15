@@ -1,0 +1,25 @@
+cache:
+  directories:
+  - "$HOME/.sbt"
+  - "$HOME/.ivy2"
+
+language: scala
+
+jdk:
+- oraclejdk8
+
+addons:
+    srcclr: true
+
+scala:
+- 2.11.8
+
+script:
+- "./test.sh"
+
+after_success:
+- "sbt coveralls"
+
+notifications:
+  email:
+  - thorben@stangenberg.ch
