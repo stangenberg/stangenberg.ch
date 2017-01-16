@@ -19,6 +19,8 @@ addSbtPlugin("org.irundaia.sbt" % "sbt-sassify" % "1.4.6")
 
 // build plugins
 
+addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.6.1")
+
 addSbtPlugin("de.heikoseeberger" % "sbt-header" % "1.6.0")
 
 addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.4.1")
