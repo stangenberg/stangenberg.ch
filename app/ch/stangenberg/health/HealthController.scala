@@ -24,18 +24,21 @@ import play.api.libs.json.{JsString, JsValue, Json, Writes}
 import play.api.mvc.{Action, Controller}
 
 @Singleton
-class HealthController extends Controller{
+class HealthController extends Controller {
   val isoDateTimeWrites = new Writes[org.joda.time.DateTime] {
-    def writes(d: org.joda.time.DateTime): JsValue = JsString(d.toString(ISODateTimeFormat.dateTime()))
+    def writes(d: org.joda.time.DateTime): JsValue =
+      JsString(d.toString(ISODateTimeFormat.dateTime()))
   }
-  def check=Action { request =>
+  def check = Action { request =>
     val json = Json.obj(
       "name" -> BuildInfo.name,
       "version" -> BuildInfo.version,
       "scalaVersion" -> BuildInfo.scalaVersion,
       "sbtVersion" -> BuildInfo.sbtVersion,
       "timestamp" -> Json.toJson(DateTime.now())(isoDateTimeWrites),
-      "reverse" -> routes.HealthController.check().absoluteURL(secure = false)(request)
+      "reverse" -> routes.HealthController
+        .check()
+        .absoluteURL(secure = false)(request)
     )
     Ok(json)
   }
