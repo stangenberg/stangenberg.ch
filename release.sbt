@@ -1,4 +1,5 @@
 import sbtrelease._
+import sbtrelease.ReleasePlugin.autoImport.ReleaseStep
 // we hide the existing definition for setReleaseVersion to replace it with our own
 import sbtrelease.ReleaseStateTransformations.{setReleaseVersion=>_,_}
 
@@ -24,11 +25,10 @@ releaseVersion <<= (releaseVersionBump)( bumper=>{
           .map(_.bump(bumper).string).getOrElse(versionFormatError)
 })
 
-releaseProcess := Seq(
+releaseProcess := Seq[ReleaseStep](
   checkSnapshotDependencies,
   inquireVersions,
-  setReleaseVersion,
   runTest,
-  tagRelease,
-  pushChanges
+  setReleaseVersion,
+  tagRelease
 )

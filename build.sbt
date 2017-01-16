@@ -1,6 +1,6 @@
 name := """stangenberg.ch"""
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file(".")).enablePlugins(PlayScala, SbtWeb)
 
 scalaVersion := "2.11.8"
 
@@ -19,6 +19,8 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies <+= scalaVersion("org.scala-lang" % "scala-compiler" % _ )
+
+pipelineStages := Seq(rjs, digest, gzip)
 
 includeFilter in (Assets, LessKeys.less) := "*.less"
 
