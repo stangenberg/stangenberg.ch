@@ -17,6 +17,8 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.1.0")
 
 addSbtPlugin("org.irundaia.sbt" % "sbt-sassify" % "1.4.6")
 
+addSbtPlugin("com.typesafe.sbt" % "sbt-gzip" % "1.0.0")
+
 // build plugins
 
 addSbtPlugin("de.heikoseeberger" % "sbt-header" % "1.6.0")
