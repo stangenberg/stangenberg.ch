@@ -40,7 +40,7 @@ class HomeController @Inject()(actorSystem: ActorSystem)(
     */
   def index = Action.async {
     Future {
-      Ok(views.html.index("Your new application is ready."))
+      Ok(views.html.index())
     }
   }
 
