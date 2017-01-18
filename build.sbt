@@ -20,7 +20,7 @@ libraryDependencies ++= Seq(
 
 libraryDependencies <+= scalaVersion("org.scala-lang" % "scala-compiler" % _ )
 
-pipelineStages := Seq(rjs, digest, gzip)
+pipelineStages := Seq(digest, gzip)
 
 includeFilter in (Assets, LessKeys.less) := "*.less"
 
